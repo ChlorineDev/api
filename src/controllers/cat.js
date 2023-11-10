@@ -2,12 +2,12 @@ import crypto from 'node:crypto';
 import { validateCat, validatePartialCat } from '../schema/catschema.js'
 import * as url from 'url';
 import path from 'node:path';
-import { readFile } from 'node:fs';
+import { readFileSync } from 'node:fs';
 //import data from '../data/cat.json' assert {type: 'json'};
 
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
-const data = readFile(path.join(__dirname, '..', 'data', 'cat.json'));
+const data = readFileSync(path.join(__dirname, '..', 'data', 'cat.json'));
 
 export const getAllCats = (req, res) => {
   res.json(data);

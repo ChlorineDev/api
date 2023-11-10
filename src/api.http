@@ -1,0 +1,17 @@
+GET http://localhost:3000/cat
+###
+POST http://localhost:3000/cat
+Content-Type: application/json
+
+{
+  "url": "http://25.media.tumblr.com/tumblr_lyufg8UKQ51qgg1s9o1_500.jpg",
+  "source_url": "http://thecatapi.com/?id=ajs"
+}
+###
+PATCH http://localhost:3000/cat/ajs
+Content-Type: application/json
+
+{
+  "url": "123",
+}
+
